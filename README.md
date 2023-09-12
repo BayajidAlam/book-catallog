@@ -17,7 +17,7 @@ various books across different genres and authors.
 - user details
 - Profile information
 
-### Live Link: https://books-catalog-by-postgeres.vercel.app/api/v1
+
 
 ### Application Routes:
 
