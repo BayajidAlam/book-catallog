@@ -17,7 +17,7 @@ various books across different genres and authors.
 - user details
 - Profile information
 
-### Live Link: https://books-catalog-by-postgeres.vercel.app/api/v1
+
 
 ### Application Routes:
 
@@ -61,5 +61,3 @@ various books across different genres and authors.
 
 ### authorization example (can use for test)
 
-authorization:
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkY2M5MTEzNy01YTVlLTQ4YTItOTNjNS1kZDAyZWE1YmE2ZjUiLCJyb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE2OTM2ODI1MTQsImV4cCI6MTY5NjI3NDUxNH0.Xwtk88YU4NpASKbjhzxYGPiALLXPyVfVXLuP1bFUQzM
