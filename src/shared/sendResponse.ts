@@ -16,7 +16,7 @@ const sendResponse = <T, K>(res: Response, data: ISendResponse<T, K>): void => {
     message: data.message ?? '',
     meta: data.meta || undefined,
     data: data.data || undefined,
-    token: data.token || null
+    token: data.token || undefined
   })
 }
 
