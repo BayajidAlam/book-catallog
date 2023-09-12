@@ -27,7 +27,7 @@ const userDetails = catchAsync(async (req: Request, res: Response) => {
 		status_code: httpStatus.OK,
 		success: true,
 		data: result,
-		message: "User's information retrieved successfully",
+		message: "User information retrieved successfully",
 	});
 });
 //  Get   users_profile
@@ -40,7 +40,7 @@ const userProfile = catchAsync(async (req: Request, res: Response) => {
 		status_code: httpStatus.OK,
 		success: true,
 		data: result,
-		message: "User's information retrieved successfully",
+		message: "User information retrieved successfully",
 	});
 });
 //  Get   user profile information
@@ -54,7 +54,7 @@ const userUpdate = catchAsync(async (req: Request, res: Response) => {
 		status_code: httpStatus.OK,
 		success: true,
 		data: result,
-		message: "User's updated successfully",
+		message: "User updated successfully",
 	});
 });
 
@@ -68,7 +68,7 @@ const deleteUser = catchAsync(async (req: Request, res: Response) => {
 		status_code: httpStatus.OK,
 		success: true,
 		data: result,
-		message: "User's deleted successfully",
+		message: "User deleted successfully",
 	});
 });
 
