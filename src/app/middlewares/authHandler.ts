@@ -6,7 +6,7 @@ import httpStatus from "http-status";
 import { jwtHelper } from "../../helpers/jwtHelper";
 import config from "../../config";
 import { Secret } from "jsonwebtoken";
-import { UserRole } from "@prisma/client";
+
 
 // requestValidationHandler
 const authHandler =
@@ -16,10 +16,11 @@ const authHandler =
 		res: Response,
 		next: NextFunction
 	): Promise<void> => {
+		console.log(selected_roles,'role');
 		try {
 			//   check authorization
 			const token = req.headers?.authorization;
-
+			// console.log(token,'Token');
 			if (!token) {
 				throw new ApiError(
 					httpStatus.UNAUTHORIZED,
@@ -31,12 +32,12 @@ const authHandler =
 				token,
 				config.jwt.access_token_secret as Secret
 			);
-			const { userId, email, role } = decoded_user;
-			console.log(userId, email, role);
+			const { userId, role } = decoded_user;
+			console.log(userId, role,'auth_handler');
 
 			// set in req
 			req.logged_in_user = decoded_user;
-
+				// console.log(userId,'id');
 			//   check if the user is authenticated
 			if (!userId) {
 				throw new ApiError(
@@ -44,7 +45,8 @@ const authHandler =
 					"Unauthorized"
 				);
 			}
-
+			
+			// console.log(role,'role');
 			//  check if the user has the required role
 			if (!selected_roles.includes(role)) {
 				throw new ApiError(
