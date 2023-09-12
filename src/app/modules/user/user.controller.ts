@@ -33,7 +33,7 @@ const userDetails = catchAsync(async (req: Request, res: Response) => {
 //  Get   users_profile
 const userProfile = catchAsync(async (req: Request, res: Response) => {
 	const user_data = req.logged_in_user;
-
+	console.log(user_data,'user data');
 	const result = await UserServices.users_profile(user_data);
 
 	sendResponse(res, {
