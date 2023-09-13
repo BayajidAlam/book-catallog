@@ -9,7 +9,7 @@ const usersList = catchAsync(async (req: Request, res: Response) => {
 	const { _id: user_id } = req.logged_in_user;
 
 	const result = await UserServices.users_list();
-
+	console.log(result);
 	sendResponse(res, {
 		status_code: httpStatus.OK,
 		success: true,
@@ -17,6 +17,7 @@ const usersList = catchAsync(async (req: Request, res: Response) => {
 		message: "Users retrieved successfully",
 	});
 });
+
 //  Get   user profile information
 const userDetails = catchAsync(async (req: Request, res: Response) => {
 	const { id: user_id } = req.params;

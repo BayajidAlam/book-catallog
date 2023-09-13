@@ -21,7 +21,7 @@ app.use('/api/v1/', AllRoutes)
 
 // testing
 app.get('/', (req, res) => {
-  res.send(root_api_response)
+  res.send("server is running!")
 })
 
 // Global error
